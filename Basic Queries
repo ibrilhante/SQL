@@ -1,0 +1,34 @@
+CREATE TABLE student (
+    student_id INT AUTO_INCREMENT,
+    name VARCHAR(35) NOT NULL, 
+    major VARCHAR(20),
+    minor VARCHAR(20) DEFAULT 'None',
+    PRIMARY KEY(student_id)
+);
+
+INSERT INTO student VALUES('Timmy', 'Biology');
+INSERT INTO student VALUES('Wanda', 'Sociology');
+INSERT INTO student(name, major) VALUES('Cosmo', 'Math');
+INSERT INTO student VALUES('Jorgen', 'Chemistry', 'History');
+
+SELECT name
+FROM student;
+
+SELECT student.name, student.major
+FROM student
+ORDER BY name ASC;
+
+SELECT *
+FROM student
+ORDER BY major, student_id DESC
+LIMIT 2;
+
+SELECT name, major
+FROM student
+WHERE major = 'Chemistry' OR major = 'Biology' OR name = 'Wanda';
+
+-- Operators: <, >, <=, >=, <>, AND, OR
+
+SELECT *
+FROM student
+WHERE name IN ('Timmy', 'Wanda', 'Cosmo');
