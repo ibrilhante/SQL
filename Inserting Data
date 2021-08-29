@@ -1,0 +1,15 @@
+CREATE TABLE student (
+    student_id INT AUTO_INCREMENT,
+    name VARCHAR(35) NOT NULL, 
+    major VARCHAR(20) UNIQUE,
+    minor VARCHAR(20) DEFAULT 'None',
+    PRIMARY KEY(student_id)
+);
+
+INSERT INTO student VALUES(1, 'Timmy', 'Biology');
+
+SELECT * FROM student; /Returns all data in table;
+
+INSERT INTO student VALUES(2, 'Wanda', 'Sociology');
+
+INSERT INTO student(name, major) VALUES('Cosmo', 'Math');

@@ -1,0 +1,8 @@
+SQL Data Types:
+
+Int - Whole Numbers
+Decimal (10,4) - Decimal Numbers
+VARCHAR (100) - String of text of length 1
+BLOB - Binary Large Object, Stores large Data
+DATE - 'yyyy-mm-dd'
+TIMESTAMP 'yyyy-mm-dd HH:MM:SS'
