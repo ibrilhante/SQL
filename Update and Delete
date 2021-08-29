@@ -1,0 +1,40 @@
+CREATE TABLE student (
+    student_id INT AUTO_INCREMENT,
+    name VARCHAR(35) NOT NULL, 
+    major VARCHAR(20),
+    minor VARCHAR(20) DEFAULT 'None',
+    PRIMARY KEY(student_id)
+);
+
+INSERT INTO student VALUES('Timmy', 'Biology');
+
+INSERT INTO student VALUES('Wanda', 'Sociology');
+
+INSERT INTO student(name, major) VALUES('Cosmo', 'Math');
+
+INSERT INTO student VALUES('Jorgen', 'Chemistry', 'History');
+
+UPDATE student
+SET major = 'Chemistry'
+WHERE major = 'Biology';
+
+UPDATE student
+SET minor = 'NA'
+WHERE minor <> 'NA';
+
+UPDATE student
+SET major = 'Computer Science'
+WHERE student_id = 2;
+
+UPDATE student
+SET major = 'Biochemistry'
+WHERE major = 'Biology' OR major = 'Chemistry';
+
+UPDATE name = 'Poof', major = 'undecided'
+WHERE student_id = 3;
+
+DELETE FROM student
+WHERE student_id = 4;
+
+DELETE FROM student
+WHERE name = 'Timmy' AND major = 'Biology';
